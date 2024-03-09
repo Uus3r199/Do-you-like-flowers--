@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do you like flowers?</title>
+    
+        <style>
+            body{
+                background-image: url(https://i.pinimg.com/originals/76/01/a3/7601a31e47247077856ed69b7b4fa124.gif);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
+                <audio autoplay loop src="duckk.mp3">
+                <source src="duckk.mp3" type="audio/mp3">
+            </audio>
+
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <img src="majn.gif" id="gif1">
+            <h1>Do you like flowers? 🌼🌷🌹</h1>
+            <p>flowers = me</p>
+
+            <div class="buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+                <script>
+
+            function nextPage() {
+                window.location.href = "yes.html";
+            }
+                    
+            function moveButton() {
+                var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                document.getElementById('noButton').style.left = `${x}px`;
+                document.getElementById('noButton').style.top = `${y}px`;
+            }
+            </script> 
+    </body>
+</html>
